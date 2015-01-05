@@ -1,11 +1,10 @@
 module Spree
   Product.class_eval do
-    translates :name, :description, :meta_description, :meta_keywords, :slug,
-      fallbacks_for_empty_translations: true
+    # translates :name, :description, :meta_description, :meta_keywords, :slug, fallbacks_for_empty_translations: true
 
-    friendly_id :slug_candidates, use: [:history, :globalize]
+    # friendly_id :slug_candidates, use: [:history, :globalize]
 
-    include SpreeI18n::Translatable
+    # include SpreeI18n::Translatable
 
     # Allow to filter products through their translations, too
     def self.like_any(fields, values)
